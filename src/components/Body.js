@@ -1,160 +1,114 @@
+function Storie(props) {
+    return (
+    <div className="story">
+        <div className="imagem">
+            <img src={props.image} alt="" />
+        </div>
+        <div className="usuario">
+            {props.user}
+        </div>
+    </div>
+    );
+}
 
+function Post(props) {
+    return (
+        <div className="post">
+            <div className="topo">
+                <div className="usuario">
+                    <img src={props.userImage} />
+                    {props.user}
+                </div>
+                <div className="acoes">
+                    <ion-icon name="ellipsis-horizontal"></ion-icon>
+                </div>
+            </div>
+
+            <div className="conteudo">
+                <img src={props.postImage} />
+            </div>
+
+            <div className="fundo">
+                <div className="acoes">
+                    <div>
+                        <ion-icon name="heart-outline"></ion-icon>
+                        <ion-icon name="chatbubble-outline"></ion-icon>
+                        <ion-icon name="paper-plane-outline"></ion-icon>
+                    </div>
+                    <div>
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div className="curtidas">
+                    <img src={props.commentImage} />
+                    <div className="texto">
+                        Curtido por <strong>{props.comment}</strong> e <strong>outras {props.number} pessoas</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
 
 
 export default function Corpo() {
+    const stories = [
+        {
+            image: "assets/img/9gag.svg",
+            user: "9gag"
+        },
+        {
+            image: "assets/img/meowed.svg",
+            user: "meowed"
+        },
+        {
+            image: "assets/img/barked.svg",
+            user: "barked"
+        },
+        {
+            image: "assets/img/nathanwpylestrangeplanet.svg",
+            user: "nathanwpylestrangeplanet"
+        },
+        {
+            image: "assets/img/wawawicomics.svg",
+            user: "wawawicomics"
+        },
+        {
+            image: "assets/img/respondeai.svg",
+            user: "respondeai"
+        },
+        {
+            image: "assets/img/filomoderna.svg",
+            user: "filomoderna"
+        },
+        {
+            image: "assets/img/memeriagourmet.svg",
+            user: "memeriagourmet"
+        }
+    ];
+
+    const posts = [
+        {}
+    ];
+
     return (
         <div className="corpo">
             <div className="esquerda">
+
                 <div className="stories">
-                    <div className="story">
-                        <div className="imagem">
-                            <img src="assets/img/9gag.svg" />
-                        </div>
-                        <div className="usuario">
-                            9gag
-                        </div>
-                    </div>
-            
-                    <div className="story">
-                        <div className="imagem">
-                            <img src="assets/img/meowed.svg" />
-                        </div>
-                        <div className="usuario">
-                            meowed
-                        </div>
-                    </div>
-            
-                    <div className="story">
-                        <div className="imagem">
-                            <img src="assets/img/barked.svg" />
-                        </div>
-                        <div className="usuario">
-                            barked
-                        </div>
-                    </div>
-            
-                    <div className="story">
-                        <div className="imagem">
-                            <img src="assets/img/nathanwpylestrangeplanet.svg" />
-                        </div>
-                        <div className="usuario">
-                            nathanwpylestrangeplanet
-                        </div>
-                    </div>
-            
-                    <div className="story">
-                        <div className="imagem">
-                            <img src="assets/img/wawawicomics.svg" />
-                        </div>
-                        <div className="usuario">
-                            wawawicomics
-                        </div>
-                    </div>
-                        
-                    <div className="story">
-                        <div className="imagem">
-                            <img src="assets/img/respondeai.svg" />
-                        </div>
-                        <div className="usuario">
-                            respondeai
-                        </div>
-                    </div>
-            
-                    <div className="story">
-                        <div className="imagem">
-                            <img src="assets/img/filomoderna.svg" />
-                        </div>
-                        <div className="usuario">
-                            filomoderna
-                        </div>
-                    </div>
-            
-                    <div className="story">
-                        <div className="imagem">
-                            <img src="assets/img/memeriagourmet.svg" />
-                        </div>
-                        <div className="usuario">
-                            memeriagourmet
-                        </div>
-                    </div>
-            
+                    {stories.map(s => <Storie image={s.image} user={s.user} />)}
+                    
                     <div className="setinha">
                         <ion-icon name="chevron-forward-circle"></ion-icon>
                     </div>
                 </div>
             
+                
                 <div className="posts">
-                    <div className="post">
-                        <div className="topo">
-                            <div className="usuario">
-                                <img src="assets/img/meowed.svg" />
-                                meowed
-                            </div>
-                            <div className="acoes">
-                                <ion-icon name="ellipsis-horizontal"></ion-icon>
-                            </div>
-                        </div>
-            
-                        <div className="conteudo">
-                            <img src="assets/img/gato-telefone.svg" />
-                        </div>
-            
-                        <div className="fundo">
-                            <div className="acoes">
-                                <div>
-                                    <ion-icon name="heart-outline"></ion-icon>
-                                    <ion-icon name="chatbubble-outline"></ion-icon>
-                                    <ion-icon name="paper-plane-outline"></ion-icon>
-                                </div>
-                                <div>
-                                    <ion-icon name="bookmark-outline"></ion-icon>
-                                </div>
-                            </div>
-            
-                            <div className="curtidas">
-                                <img src="assets/img/respondeai.svg" />
-                                <div className="texto">
-                                    Curtido por <strong>respondeai</strong> e <strong>outras 101.523 pessoas</strong>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            
-                    <div className="post">
-                        <div className="topo">
-                            <div className="usuario">
-                                <img src="assets/img/barked.svg" />
-                                barked
-                            </div>
-                            <div className="acoes">
-                                <ion-icon name="ellipsis-horizontal"></ion-icon>
-                            </div>
-                        </div>
-            
-                        <div className="conteudo">
-                            <img src="assets/img/dog.svg" />
-                        </div>
-            
-                        <div className="fundo">
-                            <div className="acoes">
-                                <div>
-                                    <ion-icon name="heart-outline"></ion-icon>
-                                    <ion-icon name="chatbubble-outline"></ion-icon>
-                                    <ion-icon name="paper-plane-outline"></ion-icon>
-                                </div>
-                                <div>
-                                    <ion-icon name="bookmark-outline"></ion-icon>
-                                </div>
-                            </div>
-            
-                            <div className="curtidas">
-                                <img src="assets/img/adorable_animals.svg" />
-                                <div className="texto">
-                                    Curtido por <strong>adorable_animals</strong> e <strong>outras 99.159 pessoas</strong>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <Post userImage="assets/img/meowed.svg" user="meowed" postImage="assets/img/gato-telefone.svg" commentImage="assets/img/respondeai.svg" comment="respondeai" number="101.523" />
+
+                    <Post userImage="assets/img/barked.svg" user="barked" postImage="assets/img/dog.svg" commentImage="assets/img/adorable_animals.svg" comment="adorable_animals" number="99.159" />
                 </div>
             </div>
             
