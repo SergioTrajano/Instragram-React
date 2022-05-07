@@ -1,7 +1,7 @@
 export default function Menu() {
     return (
-        <div className="navbar">
-            <div className="container">
+    <div className="navbar">
+        <div className="container">
             <div className="logo">
                 <ion-icon name="logo-instagram"></ion-icon>
                 <div className="separador"></div>
@@ -30,8 +30,7 @@ export default function Menu() {
             <div className="icones-mobile">
                 <ion-icon name="paper-plane-outline"></ion-icon>
             </div>
-            </div>
         </div>
-
+    </div>
     );
 }

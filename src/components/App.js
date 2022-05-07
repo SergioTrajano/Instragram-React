@@ -4,10 +4,10 @@ import Bottom from "./Bottom";
 
 export default function App() {
     return (
-        <div>
-            <Menu />
-            <Body />
-            <Bottom />
-        </div>
+    <div>
+        <Menu />
+        <Body />
+        <Bottom />
+    </div>
     );
 }
