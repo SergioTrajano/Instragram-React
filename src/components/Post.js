@@ -34,7 +34,7 @@ export default function Post(props) {
             <div className="fundo">
                 <div className="acoes">
                     <div>
-                        <ion-icon name={heart} onClick={() => Like("")}></ion-icon>
+                        <ion-icon style={{color: cla}} name={heart} onClick={() => Like("")}></ion-icon>
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
