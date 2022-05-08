@@ -5,23 +5,28 @@ export default function Sidebar() {
     const suggestions = [
         {
             image: "assets/img/bad.vibes.memes.svg",
-            user: "bad.vibes.memes"
+            user: "bad.vibes.memes",
+            status: "Segue você"
         },
         {
             image: "assets/img/chibirdart.svg",
-            user: "chibirdart"
+            user: "chibirdart",
+            status: "Segue você"
         },
         {
             image: "assets/img/razoesparaacreditar.svg",
-            user: "razoesparaacreditar"
+            user: "razoesparaacreditar",
+            status: "Novo no Instagram"
         },
         {
             image: "assets/img/adorable_animals.svg",
-            user: "adorable_animals"
+            user: "adorable_animals",
+            status: "Segue você"
         },
         {
             image: "assets/img/smallcutecats.svg",
-            user: "smallcutecats"
+            user: "smallcutecats",
+            status: "Segue você"
         }
     ];
 
@@ -35,7 +40,7 @@ export default function Sidebar() {
                 <div>Ver tudo</div>
             </div>
 
-            {suggestions.map(s => <Suggestion image={s.image} user={s.user} />)}
+            {suggestions.map(s => <Suggestion image={s.image} user={s.user} status={s.status}/>)}
 
         </div>
 
